@@ -1,0 +1,30 @@
+AllCops:
+  Exclude:
+    - "db/**/*"
+    - "config/**/*"
+    - "script/**/*"
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "spec/spec_helper.rb"
+    - "spec/rails_helper.rb"
+    - "test/test_helper.rb"
+    - "spec/mailers/previews/**/*"
+    - "node_modules/**/*"
+    - ".git/**/*"
+    - "lib/tasks/**/*"
+    - !ruby/regexp /old_and_unused\.rb$/
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
