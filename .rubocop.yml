@@ -22,6 +22,16 @@ Style/Documentation:
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
 
+# Checks if there is a magic comment to enforce string literals
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Bundler/OrderedGems:
+  Enabled: false
+
 Naming/AccessorMethodName:
   Enabled: false
 

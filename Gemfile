@@ -17,7 +17,7 @@ gem "figaro"
 
 group :development, :test do
   gem "awesome_print"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
   gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
   gem "pry-rails"
@@ -41,4 +41,4 @@ group :test do
   gem "shoulda-matchers"
 end
 
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
