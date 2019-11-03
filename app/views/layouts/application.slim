@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Video Share
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    meta name="description" content="Share funny videos"
+    meta name="keywords" content="video, share, youtube, twitter"
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = yield :stylesheet
+
+    - if content_for?(:head)
+      = yield(:head)
+  body
+    .turbolinks-progress-bar
+    = render "layouts/header"
+    main
+      .container
+        / = render "layouts/alerts"
+        = yield
+    = render "layouts/footer"
+    = yield :javascript
