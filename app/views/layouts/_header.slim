@@ -4,8 +4,19 @@ nav.navbar.navbar-expand-lg.navbar-light.site-header
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      form.form-inline.my-2.my-lg-0
-        input.form-control.mr-sm-2 placeholder="Email" type="email" /
-        input.form-control.mr-sm-2 placeholder="Password" type="password" /
-        button.btn.btn-outline-success.my-2.my-sm-0 type="submit"
-          = "Login / Register"
+      - if user_signed_in?
+        .text.mr-sm-3
+          = "Welcome, #{current_user.email}"
+        button.btn.btn-success.mr-sm-3 type="button" Share a video
+        = link_to "Logout", destroy_user_session_path, method: :delete,
+          class: "btn btn-outline-success"
+      - else
+        = form_with scope: :user, url: user_session_path, local: true,
+          class: "form-inline my-2 my-lg-0" do |f|
+          = f.email_field :email, placeholder: "Email",
+            class: "form-control mr-sm-2", required: true
+          = f.password_field :password, placeholder: "Password", required: true,
+             pattern: ".{6,}", title: "Eight or more characters",
+             class: "form-control mr-sm-2"
+          = f.button "Login / Register", class: "btn btn-outline-success my-2 my-sm-0",
+            type: "submit"

@@ -17,6 +17,7 @@ gem "figaro"
 gem "jquery-rails"
 gem "bootstrap", "~> 4.3.1"
 gem "font-awesome-rails"
+gem "devise"
 
 group :development, :test do
   gem "awesome_print"
