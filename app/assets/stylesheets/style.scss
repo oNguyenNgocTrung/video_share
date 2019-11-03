@@ -1,3 +1,16 @@
+///////////////// Alert //////////////////////
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert {
+  width: 100%;
+}
+
 ///////////////// Header /////////////////////
 .site-header {
   background-color: $white;
