@@ -4,10 +4,25 @@ describe "Homepage" do
   before { visit root_path }
 
   describe "Header" do
-    it "has logo brand" do
-      header = page.find(".site-header")
+    subject { page.find(".site-header") }
 
-      expect(header).to have_content "VideoShare"
+    it "has logo brand" do
+      expect(subject).to have_content "VideoShare"
+    end
+
+    context "When user is not logged in" do
+      it do
+        expect(subject).to have_field "user_email", type: "email"
+        expect(subject).to have_field "user_password", type: "password"
+      end
+    end
+
+    context "When user logged in", logged_in: true do
+      it do
+        expect(subject).to have_content "Welcome, #{user.email}"
+        expect(subject).to have_button "Share a video"
+        expect(subject).to have_link "Logout"
+      end
     end
   end
 
