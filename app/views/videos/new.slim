@@ -1,0 +1,12 @@
+.row.justify-content-center.u-mt50
+  .col-md-6
+    .card
+      h5.card-header.text-center Share a Youtube video
+      .card-body
+        = form_for @video do |f|
+          .form-group
+            = f.text_field :url, class: "form-control #{'is-invalid' if @video.errors.any?}",
+              required: true, pattern: Settings.youtube_url_match,
+              placeholder: "Enter the youtube video url you want to share"
+            .invalid-feedback = "Please provide a valid youtube url."
+          = f.button "Share", type: "submit", class: "btn btn-success btn-block"

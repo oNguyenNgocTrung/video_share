@@ -1,13 +1,13 @@
 nav.navbar.navbar-expand-lg.navbar-light.site-header
   .container
-    a.navbar-brand href="#"  VideoShare
+    a.navbar-brand href="/"  VideoShare
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       - if user_signed_in?
         .text.mr-sm-3
           = "Welcome, #{current_user.email}"
-        button.btn.btn-success.mr-sm-3 type="button" Share a video
+        = link_to "Share a video", new_video_path, class: "btn btn-success mr-sm-3"
         = link_to "Logout", destroy_user_session_path, method: :delete,
           class: "btn btn-outline-success"
       - else

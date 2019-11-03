@@ -11,6 +11,19 @@
   width: 100%;
 }
 
+/////////////////// Card /////////////////////
+.card {
+  border: 0;
+  border-radius: 0px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.03);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+
+
 ///////////////// Header /////////////////////
 .site-header {
   background-color: $white;
@@ -44,4 +57,52 @@
 main {
   padding-top: 68px;
   min-height: calc(100vh - 68px);
+}
+
+
+//////////////// Text ///////////////////////
+.text {
+  font-size: $font-size-base;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $pickledBluewood
+}
+
+.text-small {
+  font-size: $font-size-small;
+  font-weight: 400;
+}
+
+.text-large {
+  font-size: $font-size-large;
+  font-weight: 600;
+}
+
+.text-big {
+  font-size: $font-size-big;
+  font-weight: 600;
+}
+
+.text-river-bed {
+  color: $river-bed;
+}
+
+
+///////////////////// Pagination ///////////////
+.page-item.active .page-link {
+  background-color: $eucalyptus;
+  border-color: $eucalyptus;
+
+  &:hover {
+    color: $white;
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+}
+
+.page-link, .page-link:hover {
+  color: $eucalyptus;
 }

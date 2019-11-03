@@ -20,7 +20,7 @@ describe "Homepage" do
     context "When user logged in", logged_in: true do
       it do
         expect(subject).to have_content "Welcome, #{user.email}"
-        expect(subject).to have_button "Share a video"
+        expect(subject).to have_link "Share a video"
         expect(subject).to have_link "Logout"
       end
     end
