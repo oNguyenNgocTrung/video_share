@@ -1,0 +1,26 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  -ms-overflow-style: scrollbar;
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  min-height: 100vh;
+  background-color: $catskill-white
+}
+
+.turbolinks-progress-bar {
+  height: 4px;
+  background-color: $eucalyptus;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

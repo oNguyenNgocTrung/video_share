@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'AvenirNext';
+  font-weight: normal;
+  src: url(asset_path('AvenirNext-Regular.eot'));
+  src: url(asset_path('AvenirNext-Regular.eot')) format('embedded-opentype'), url(asset_path('AvenirNext-Regular.woff')) format('woff'), url(asset_path('AvenirNext-Regular.ttf')) format('truetype'), url(asset_path('AvenirNext-Regular.svg#AvenirRegular')) format('svg');
+}
+@font-face {
+  font-family: 'AvenirNext';
+  font-weight: 500;
+  src: url(asset_path('AvenirNext-Medium.eot'));
+  src: url(asset_path('AvenirNext-Medium.eot')) format('embedded-opentype'), url(asset_path('AvenirNext-Medium.woff')) format('woff'), url(asset_path('AvenirNext-Medium.ttf')) format('truetype'), url(asset_path('AvenirNext-Medium.svg#AvenirMedium')) format('svg');
+}
+@font-face {
+  font-family: 'AvenirNext';
+  font-weight: 800;
+  src: url(asset_path('AvenirNext-Bold.eot'));
+  src: url(asset_path('AvenirNext-Bold.eot')) format('embedded-opentype'), url(asset_path('AvenirNext-Bold.woff')) format('woff'), url(asset_path('AvenirNext-Bold.ttf')) format('truetype'), url(asset_path('AvenirNext-Bold.svg#AvenirBold')) format('svg');
+}
+@font-face {
+  font-family: 'AvenirNext';
+  font-weight: 600;
+  src: url(asset_path('AvenirNext-DemiBold.eot'));
+  src: url(asset_path('AvenirNext-DemiBold.eot')) format('embedded-opentype'), url(asset_path('AvenirNext-DemiBold.woff')) format('woff'), url(asset_path('AvenirNext-DemiBold.ttf')) format('truetype'), url(asset_path('AvenirNext-DemiBold.svg#AvenirDemiBold')) format('svg');
+}

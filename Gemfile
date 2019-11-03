@@ -14,6 +14,9 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "slim"
 gem "figaro"
+gem "jquery-rails"
+gem "bootstrap", "~> 4.3.1"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "awesome_print"
@@ -37,7 +40,7 @@ end
 group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
-  gem "chromedriver-helper"
+  gem "webdrivers", "~> 4.0"
   gem "shoulda-matchers"
 end
 

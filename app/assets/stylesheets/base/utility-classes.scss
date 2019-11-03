@@ -1,0 +1,32 @@
+$property-map: (
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  mih: min-height,
+  miw: min-width
+);
+
+$sizes-list: 0 5 10 15 20 25 30 35 40 45 50 70 80 100;
+
+@each $size in $sizes-list {
+  $val: $size + px;
+  @each $keyword, $property in $property-map {
+    .u-#{$keyword}#{$size} {
+      #{$property}: $val !important;
+    }
+  }
+}
+
+/// Auto
+@each $keyword, $property in $property-map {
+  .u-#{$keyword}-auto {
+    #{$property}: auto !important;
+  }
+}
