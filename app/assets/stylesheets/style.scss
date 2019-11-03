@@ -59,6 +59,13 @@ main {
   min-height: calc(100vh - 68px);
 }
 
+a {
+  color: $eucalyptus;
+  &:hover {
+    color: #1e7e34;
+  }
+}
+
 
 //////////////// Text ///////////////////////
 .text {

@@ -1,7 +1,7 @@
 class VideoService
   attr_reader :url, :user, :video, :errors
 
-  def initialize url, user
+  def initialize(url, user)
     @url = url
     @video = Video.new user: user, url: url
     @errors = []
@@ -17,9 +17,11 @@ class VideoService
   end
 
   private
+
   def video_info_attributes
     video_info = VideoInfo.new url
     raise "Url is not usable by Youtube" unless video_info.available?
+
     {
       video_uuid: video_info.video_id,
       provider: "Youtube",

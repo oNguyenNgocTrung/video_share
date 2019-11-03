@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def new
     @video = Video.new
@@ -22,6 +22,7 @@ class VideosController < ApplicationController
   end
 
   private
+
   def video_params
     params.require(:video).permit :url
   end

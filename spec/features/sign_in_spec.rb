@@ -16,7 +16,7 @@ describe "Sign In" do
         click_button "Login / Register"
       end
 
-      expect(page).to have_content 'Signed in successfully.'
+      expect(page).to have_content "Signed in successfully."
     end
 
     scenario "Signing in with correct email password" do
@@ -27,7 +27,7 @@ describe "Sign In" do
         click_button "Login / Register"
       end
 
-      expect(page).to have_content 'Invalid Email or password.'
+      expect(page).to have_content "Invalid Email or password."
     end
   end
 
@@ -40,7 +40,7 @@ describe "Sign In" do
         click_button "Login / Register"
       end
 
-      expect(page).to have_content 'Welcome! You have signed up successfully.'
+      expect(page).to have_content "Welcome! You have signed up successfully."
     end
 
     scenario "Signing up with correct password too short" do
