@@ -10,4 +10,8 @@ RSpec.describe User, type: :model do
   describe "ActiveModel validations" do
     it { expect(user).to validate_presence_of(:email) }
   end
+
+  describe "ActiveRecord associations" do
+    it { expect(user).to have_many(:videos).dependent(:destroy) }
+  end
 end

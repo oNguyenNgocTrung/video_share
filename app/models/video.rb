@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
 
   validates :video_uuid, :provider, :url, presence: true
 
